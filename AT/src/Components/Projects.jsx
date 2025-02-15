@@ -88,7 +88,7 @@ const CustomArrows = styled.div`
     color: white;
     border: none;
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 50%;
     font-family: 'Questrial', sans-serif;

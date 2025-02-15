@@ -65,7 +65,7 @@ const LoadingScreen = ({ setLoading }) => {
   return (
     <LoaderContainer>
       <PulseCircle />
-      <LoaderText>AmburTec{dots}</LoaderText>
+      <LoaderText>Amburtec{dots}</LoaderText>
     </LoaderContainer>
   );
 };

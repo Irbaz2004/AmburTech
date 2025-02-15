@@ -113,7 +113,7 @@ const NavItem = styled.li`
   padding: 10px 0;
   font-weight: bold;
       font-family: "Questrial", serif;
-      font-weight:400;
+      font-weight:500;
 
 
 
@@ -276,8 +276,8 @@ const Navbar = () => {
           >
             Services <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 1}>
-              <li>Water Treatment</li>
-              <li>Effluent Recycling</li>
+              <li>Pre-Treatment System</li>
+              <li>Statistical Profile</li>
               <li>Sludge Management</li>
             </DropdownMenu>
           </NavItem>
@@ -290,9 +290,9 @@ const Navbar = () => {
           >
             ZLD <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 2}>
-              <li>Zero Liquid Discharge Process</li>
-              <li>Benefits</li>
-              <li>Implementation</li>
+              <li>Pre-Treatment</li>
+              <li>Reverse Osmosis</li>
+              <li>Multiple Effect Evaporator</li>
             </DropdownMenu>
           </NavItem>
 
@@ -304,9 +304,9 @@ const Navbar = () => {
           >
             Testing Lab <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 3}>
-              <li>Lab Capabilities</li>
+              <li>Introduction</li>
               <li>Testing Methods</li>
-              <li>Certifications</li>
+              <li>View Of Modern Equipment</li>
             </DropdownMenu>
           </NavItem>
 

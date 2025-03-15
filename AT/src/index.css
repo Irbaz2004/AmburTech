@@ -17,7 +17,7 @@
 font-weight: 400;
 font-style: normal; */
 
-body{
+html,body{
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   scroll-behavior: smooth;

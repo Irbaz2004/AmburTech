@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { FaChevronDown, FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope, FaBars } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhone,
+  FaEnvelope,
+  FaBars,
+} from "react-icons/fa";
 import AT_Logo from "../assets/AT-Logo.png";
 import { gsap } from "gsap";
 
@@ -9,6 +17,7 @@ import { gsap } from "gsap";
 const NavbarContainer = styled.div`
   width: 100%;
   z-index: 1000;
+  margin: 0;
 `;
 
 // Top Bar with Social Media & Contact Info
@@ -17,7 +26,7 @@ const TopBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 5%;
-  background-color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   color: white;
   font-size: 14px;
   position: fixed;
@@ -25,8 +34,7 @@ const TopBar = styled.div`
   left: 0;
   width: 100%;
   z-index: 999;
-      font-family: "Gantari", serif;
-
+  font-family: "Gantari", serif;
 
   @media (max-width: 768px) {
     display: none;
@@ -58,12 +66,10 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 15px 5%;
-      font-family: "Gantari", serif;
-
-
+  font-family: "Gantari", serif;
 
   @media (max-width: 768px) {
-  top:-1%;
+    top: -1%;
   }
 `;
 
@@ -78,9 +84,9 @@ const Logo = styled.img`
 const NavLinks = styled.ul`
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
   position: relative;
-      font-family: "Questrial", serif;
+  font-family: "Questrial", serif;
 
   @media (max-width: 1095px) {
     flex-direction: column;
@@ -94,9 +100,10 @@ const NavLinks = styled.ul`
     visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     padding: 0px 50px;
-    background:rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
     color: white;
-    padding:15px 30px;
+    padding: 15px 30px;
+    gap: 20px;
   }
 `;
 
@@ -112,18 +119,15 @@ const NavItem = styled.li`
   transition: color 0.3s;
   padding: 10px 0;
   font-weight: bold;
-      font-family: "Questrial", serif;
-      font-weight:500;
-
-
+  font-family: "Questrial", serif;
+  font-weight: 500;
 
   &:hover {
     color: #ff5733;
   }
 
   &.active {
-    color:#ff5733;
-    font-weight: bold;
+    color: #ff5733;
     font-size: 18px;
   }
 
@@ -136,8 +140,6 @@ const NavItem = styled.li`
     text-align: start;
     width: 100%;
     color: white;
-
-
   }
 `;
 
@@ -162,8 +164,8 @@ const DropdownMenu = styled.ul`
     color: #001f5f;
     cursor: pointer;
     transition: background 0.3s;
-        font-family: "Questrial", serif;
-font-weight:400;
+    font-family: "Questrial", serif;
+    font-weight: 400;
 
     &:hover {
       background: rgb(255, 0, 0);
@@ -196,13 +198,13 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
-  const isActive = (path) => location.pathname === path ? 'active' : '';
+  const isActive = (path) => (location.pathname === path ? "active" : "");
 
   useEffect(() => {
     gsap.to(".navbar-container", {
       opacity: 1,
       duration: 1,
-      ease: "power2.out"
+      ease: "power2.out",
     });
 
     gsap.from(".navbar-logo", {
@@ -210,7 +212,7 @@ const Navbar = () => {
       opacity: 0,
       duration: 1,
       ease: "power2.out",
-      delay: 0.5
+      delay: 0.5,
     });
 
     gsap.from(".navbar-links li", {
@@ -219,7 +221,7 @@ const Navbar = () => {
       stagger: 0.1,
       duration: 1,
       ease: "power2.out",
-      delay: 1
+      delay: 1,
     });
   }, []);
 
@@ -243,91 +245,129 @@ const Navbar = () => {
         <Logo src={AT_Logo} alt="Amburtec Logo" />
         <MobileMenuIcon onClick={toggleMenu} />
         <NavLinks isOpen={isMenuOpen}>
-          <NavItem className={isActive('/')}>
+          <NavItem className={isActive("/")}>
             <Link to="/">Home</Link>
           </NavItem>
 
           <NavItem
             onMouseEnter={() => window.innerWidth > 768 && setOpenDropdown(0)}
-            onMouseLeave={() => window.innerWidth > 768 && setOpenDropdown(null)}
+            onMouseLeave={() =>
+              window.innerWidth > 768 && setOpenDropdown(null)
+            }
             onClick={() => handleDropdown(0)}
-            className={isActive('/about')}
+            className={isActive("/about")}
           >
-            About Us <FaChevronDown size={13} />
+            <Link to={"/about"}> About Us</Link> <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 0}>
-              <li>General Information</li>
-              <li>Statistical Profile</li>
-              <li>Unique Features of the CETP</li>
-              <li>Plant Performance</li>
-              <li>Treatment Plant Data</li>
-              <li>Computerized Operations & Management</li>
-              <li>Organization Chart</li>
-              <li>Board Of Directors</li>
-              <li>Acknowledgement</li>
-              <li>Green Belt Development</li>
+              <Link to="/about/generalinformation">
+                <li>General Information</li>
+              </Link>
+
+              <Link to={"/about/statisticalprofile"}>
+                <li>Statistical Profile</li>
+              </Link>
+
+              <Link to={"/about/uniquefeaturesofthecetp"}>
+                <li>Unique Features of the CETP</li>
+              </Link>
+
+              <Link to={"/about/plantperformance"}>
+                <li>Plant Performance</li>
+              </Link>
+
+              <Link to={"/about/treatmentplantdata"}>
+                <li>Treatment Plant Data</li>
+              </Link>
+
+              <Link to={"/about/computerizedcetp"}>
+                <li>Computerized Operations & Management</li>
+              </Link>
+
+              <Link to={"/about/organizationchart"}>
+                <li>Organization Chart</li>
+              </Link>
+
+              <Link to={"/about/boardofdirectors"}>
+                <li>Board Of Directors</li>
+              </Link>
+              
+              <Link to={"/about/acknowledgement"}>
+                <li>Acknowledgement</li>
+              </Link>
+
+              <Link to={"/about/greenbeltdevelopment"}>
+                <li>Green Belt Development</li>
+              </Link>
             </DropdownMenu>
           </NavItem>
 
           <NavItem
             onMouseEnter={() => window.innerWidth > 768 && setOpenDropdown(1)}
-            onMouseLeave={() => window.innerWidth > 768 && setOpenDropdown(null)}
+            onMouseLeave={() =>
+              window.innerWidth > 768 && setOpenDropdown(null)
+            }
             onClick={() => handleDropdown(1)}
-            className={isActive('/services')}
+            className={isActive("/services")}
           >
             Services <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 1}>
-              <li>Pre-Treatment System</li>
-              <li>Statistical Profile</li>
-              <li>Sludge Management</li>
+              <Link to={"/servicepage/pretreatmentsystem"}><li>Pre-Treatment System</li></Link>
+             <Link to={"/servicepage/statisticalprofile"}><li>Statistical Profile</li></Link> 
             </DropdownMenu>
           </NavItem>
 
           <NavItem
             onMouseEnter={() => window.innerWidth > 768 && setOpenDropdown(2)}
-            onMouseLeave={() => window.innerWidth > 768 && setOpenDropdown(null)}
+            onMouseLeave={() =>
+              window.innerWidth > 768 && setOpenDropdown(null)
+            }
             onClick={() => handleDropdown(2)}
-            className={isActive('/zld')}
+            className={isActive("/zld")}
           >
             ZLD <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 2}>
-              <li>Pre-Treatment</li>
-              <li>Reverse Osmosis</li>
-              <li>Multiple Effect Evaporator</li>
+             <Link to={"/zld/pretreatment"}><li>Pre-Treatment</li></Link> 
+              <Link to={"/zld/reverseosmosis"}><li>Reverse Osmosis</li></Link>
+             <Link to={"/zld/multipleeffectevaporator"}><li>Multiple Effect Evaporator</li></Link> 
+             <Link to={"/zld/pretreatment/processflowdiagram"}><li>Process Flow Diagram</li></Link>
+             <Link to={"/zld/pretreatment/unitsizedesign"}><li>Unit Size & Design</li></Link>
+             <Link to={"/zld/pretreatment/gallery"}><li>Gallery</li></Link>
             </DropdownMenu>
           </NavItem>
 
           <NavItem
             onMouseEnter={() => window.innerWidth > 768 && setOpenDropdown(3)}
-            onMouseLeave={() => window.innerWidth > 768 && setOpenDropdown(null)}
+            onMouseLeave={() =>
+              window.innerWidth > 768 && setOpenDropdown(null)
+            }
             onClick={() => handleDropdown(3)}
-            className={isActive('/testing-lab')}
+            className={isActive("/testing-lab")}
           >
             Testing Lab <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 3}>
-              <li>Introduction</li>
-              <li>Testing Methods</li>
-              <li>View Of Modern Equipment</li>
+              <Link to={"/testinglab/introduction"}><li>Introduction</li></Link>
+              <Link to={"/testinglab/viewofmodernequipe"}><li>View Of Modern Equipment</li></Link>
             </DropdownMenu>
           </NavItem>
 
-          <NavItem className={isActive('/member-tanneries')}>
-            <Link to="/member-tanneries">Member Tanneries</Link>
+          <NavItem className={isActive("/member-tanneries")}>
+            <Link to="/membertanneries">Member Tanneries</Link>
           </NavItem>
 
-          <NavItem className={isActive('/slf')}>
+          <NavItem className={isActive("/slf")}>
             <Link to="/slf">SLF</Link>
           </NavItem>
 
-          <NavItem className={isActive('/annual-returns')}>
-            <Link to="/annual-returns">Annual Returns</Link>
+          <NavItem className={isActive("/annual-returns")}>
+            <Link to="/annualreturn">Annual Returns</Link>
           </NavItem>
 
-          <NavItem className={isActive('/projects')}>
+          <NavItem className={isActive("/projects")}>
             <Link to="/projects">Projects</Link>
           </NavItem>
 
-          <NavItem className={isActive('/contact-us')}>
-            <Link to="/contact-us">Contact Us</Link>
+          <NavItem className={isActive("/contact-us")}>
+            <Link to="/contact">Contact Us</Link>
           </NavItem>
         </NavLinks>
       </Nav>

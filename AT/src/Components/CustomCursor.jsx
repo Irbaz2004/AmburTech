@@ -5,13 +5,14 @@ import styled from "styled-components";
 const CursorContainer = styled.div`
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99999; /* Make sure it's above everything */
   mix-blend-mode: difference;
 
   @media (max-width: 768px) {
-    display: none; // Hide cursor on mobile
+    display: none;
   }
 `;
+
 
 // Small inner cursor
 const InnerCursor = styled.div`

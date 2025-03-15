@@ -90,6 +90,7 @@ const SubscribeSection = styled.div`
   align-items: center;
   background: black;
   overflow: hidden;
+  border-radius:30px;
 
   input {
      flex: 1;
@@ -102,6 +103,7 @@ const SubscribeSection = styled.div`
   font-family: "Questrial", sans-serif;
   width: 100%;
   max-width: 400px;
+  border-radius: 5px;
 
   @media (max-width: 768px) {
     padding: 17px 20px;

@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 import { BreadCrumb } from '.././Components/BreadCrumb';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe, FaClock,FaFacebookF, FaGoogle, FaYoutube  } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Title = styled.h1`
@@ -252,6 +257,27 @@ const ContactInfo = styled.div`
 
 
 export default function Contact() {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_44xfauw',
+      'template_o3ysg9o',
+      formRef.current,
+      '4yT5oJxa-TLBNsIAy'
+    ).then(
+      (result) => {
+        toast.success(" Message Sent Successfully!");
+        formRef.current.reset();
+      },
+      (error) => {
+        toast.error("❌ Failed to send the message. Please try again.");
+        console.error(error.text);
+      }
+    );
+  };
   return (
     <>
       <BreadCrumb title="Contact Us" path="/contact" />
@@ -273,13 +299,16 @@ export default function Contact() {
 
       <ContactContainer>
         <FormContainer>
-          <Form>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="text" placeholder="Subject" required />
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">SEND</button>
-          </Form>
+        <Form ref={formRef} onSubmit={sendEmail}>
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="text" name="subject" placeholder="Subject" required />
+  <textarea name="message" placeholder="Message" required></textarea>
+  <button type="submit">SEND</button>
+</Form>
+<ToastContainer position="top-right" autoClose={3000} />
+
+
         </FormContainer>
 
         <InfoContainer>

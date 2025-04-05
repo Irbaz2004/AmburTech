@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import TLE01 from "../../assets/TLE01.jpg"
 import { BreadCrumb } from "../../Components/BreadCrumb";
 
 const Title = styled.h1`
@@ -11,7 +12,7 @@ const Title = styled.h1`
 
   hr {
     width: 170px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 
@@ -42,6 +43,37 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin-bottom: 15px;
 `;
+
+
+const SubTitle = styled.h2`
+  text-decoration: underline;
+  padding: 20px 0px;
+  font-size: 1.2rem;
+  font-family: "Gantari", serif;
+  position: relative;
+`;
+
+const Container = styled.div`
+  padding: 20px 5vw;
+  font-size: 1.2rem;
+  font-family: "Gantari", serif;
+  position: relative;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  margin:0 50px;
+  padding: 20px 0px;
+`;
+
+// Image Item Styles (Even Size)
+const ImageItem = styled.img`
+  width: 300px;
+  height: 200px; /* Fixed Height */
+  object-fit: cover;
+  border-radius: 10px;
+`;
+
 export default function Introduction() {
   return (
     <>
@@ -65,6 +97,14 @@ export default function Introduction() {
         </ListItem>
       </List>
 
+<Container>
+  
+  
+<SubTitle>View Of Modern Equipment</SubTitle>
+ <ImageContainer>
+      <ImageItem src={TLE01} alt="Test image" />
+      </ImageContainer>
+</Container>
     </>
   );
 }

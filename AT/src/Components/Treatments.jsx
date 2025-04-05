@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaFilter, FaTint, FaRecycle } from 'react-icons/fa';
+import { FaTint, FaRecycle, FaBacteria } from 'react-icons/fa';
+import { GiWaterDrop, GiChemicalDrop } from 'react-icons/gi';
 
 const AboutContainer = styled.div`
   min-height: 500px;
@@ -124,7 +125,7 @@ const Description = styled.div`
   color: white;
   font-size: 16px;
   font-family: 'Questrial', sans-serif;
-  max-width: 85%;
+  max-width: 100%;
   line-height: 1.2;
 
   @media (max-width: 768px) {
@@ -147,31 +148,47 @@ export default function Treatments() {
         <Timeline>
           <Step>
             <IconWrapper>
-              <FaFilter />
+              <GiWaterDrop />
             </IconWrapper>
             <Description>
               <strong>01 | Primary Treatment</strong>
-              <p>Initial filtration removing solids and debris, ensuring cleaner wastewater for efficient downstream processes.</p>
+              <p>Removes large solids and suspended particles through screening and sedimentation processes.</p>
             </Description>
           </Step>
-
+          <Step>
+            <IconWrapper>
+              <FaBacteria />
+            </IconWrapper>
+            <Description>
+              <strong>02 | Secondary Treatment</strong>
+              <p>Uses biological processes to degrade organic matter, reducing BOD and COD in the wastewater.</p>
+            </Description>
+          </Step>
+          <Step>
+            <IconWrapper>
+              <GiChemicalDrop />
+            </IconWrapper>
+            <Description>
+              <strong>03 | Tertiary Treatment</strong>
+              <p>Advanced chemical treatment and filtration to remove dissolved contaminants like TDS, nitrogen, and phosphorus.</p>
+            </Description>
+          </Step>
           <Step>
             <IconWrapper>
               <FaTint />
             </IconWrapper>
             <Description>
-              <strong>02 | Reverse Osmosis</strong>
-              <p>Advanced filtration removing 99% impurities, delivering pure water for efficient leather tanning processes.</p>
+              <strong>04 | Reverse Osmosis</strong>
+              <p>High-pressure membrane process that removes dissolved solids, producing high-purity water for reuse.</p>
             </Description>
           </Step>
-
           <Step>
             <IconWrapper>
               <FaRecycle />
             </IconWrapper>
             <Description>
-              <strong>03 | Evaporator System</strong>
-              <p>Concentrates wastewater, recovers valuable resources, and enables ZLD for sustainable leather production.</p>
+              <strong>05 | Evaporator System</strong>
+              <p>Concentrates RO rejects and recovers water by evaporation, enabling Zero Liquid Discharge (ZLD).</p>
             </Description>
           </Step>
         </Timeline>

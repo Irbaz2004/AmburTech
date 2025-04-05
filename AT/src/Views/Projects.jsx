@@ -11,7 +11,7 @@ const Title = styled.h1`
 
   hr {
     width: 70px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 
@@ -112,11 +112,9 @@ export default function Projects() {
       <SubTitle>Proposal under STEP Scheme – 2025</SubTitle>
       <List>
         <ListItem>1. 1000 kg/hr Paddle dryer</ListItem>
-        <ListItem>2. 10 cu.m/hr Screw press</ListItem>
-        <ListItem>3. OCEMS at 8TPH Boiler stack</ListItem>
-        <ListItem>4. 500 kVAR X 2 APFC Panel with 300A X 2 Harmonic Filter Unit</ListItem>
-        <ListItem>5. 60 cu.m X 2 Multi grade Filter</ListItem>
-        <ListItem>6. 2 MW Solar power plant</ListItem>
+        <ListItem>2. OCEMS at 8TPH Boiler stack</ListItem>
+        <ListItem>3. 500 kVAR X 2 APFC Panel with 300A X 2 Harmonic Filter Unit</ListItem>
+        
       </List>
     </>
   );

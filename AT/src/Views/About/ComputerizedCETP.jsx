@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { BreadCrumb } from '../../Components/BreadCrumb';
+import ATCE02 from "../../assets/AT02.jpg"
 
 const Title = styled.h1`
   padding: 20px 5vw;
@@ -12,7 +13,7 @@ const Title = styled.h1`
   
       hr {
     width: 170px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 
@@ -63,7 +64,7 @@ export default function ComputerizedCETP() {
             <hr />
           </Title>
           <ImageContainer>
-                  <StyledImage src="http://ranitec.com/images/Computerized%20Operation%20management%20background.png" alt="Organization Chart" />
+                  <StyledImage src={ATCE02} alt="Organization Chart" />
                 </ImageContainer>
       
     </>

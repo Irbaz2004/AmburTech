@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const AboutContainer = styled.div`
   min-height: 400px;
@@ -92,11 +93,6 @@ const ReadMoreButton = styled.button`
       border: 1px solid black;
 
 
-  &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-  }
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -195,19 +191,19 @@ export default function About() {
                 Using innovative, sustainable technologies, we help businesses manage and treat their 
                 wastewater efficiently while meeting environmental standards.
               </Description>
-              <ReadMoreButton>Read More</ReadMoreButton>
+              <ReadMoreButton><Link to={"/about"} style={{color:"white"}}>Read More</Link></ReadMoreButton>
             </DescriptionWrapper>
           </AboutText>
         </TextWrapper>
       </AboutContainer>
       <BoxContainer>
         <Box>
-          <BoxText>Over dozens of successful projects nationwide, setting benchmarks.</BoxText>
+          <BoxText>Over dozens of successful projects, setting benchmarks.</BoxText>
           <BoxNumber>+17</BoxNumber>
         </Box>
         <Box>
           <BoxText>Over two decades of pioneering water treatment innovations, empowering leather tanneries to thrive sustainably.</BoxText>
-          <BoxNumber>+22</BoxNumber>
+          <BoxNumber>30</BoxNumber>
         </Box>
         <Box>
           <BoxText>Hundreds of advanced machines delivering precision and efficiency.</BoxText>
@@ -215,7 +211,7 @@ export default function About() {
         </Box>
         <Box>
           <BoxText>Over hundreds of dedicated professionals driving water treatment excellence.</BoxText>
-          <BoxNumber>+120</BoxNumber>
+          <BoxNumber>+100</BoxNumber>
         </Box>
       </BoxContainer>
     </>

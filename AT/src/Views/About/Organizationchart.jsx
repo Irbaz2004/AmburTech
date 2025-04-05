@@ -12,7 +12,7 @@ const Title = styled.h1`
 
      hr {
     width: 170px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 

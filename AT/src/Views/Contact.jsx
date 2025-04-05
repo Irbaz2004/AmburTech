@@ -19,7 +19,7 @@ const Title = styled.h1`
 
   hr {
     width: 100px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
     
@@ -89,7 +89,7 @@ const Form = styled.form`
   }
 
   button {
-    background-color: red;
+    background-color: #00911a;
     color: white;
     padding: 10px;
     border: none;
@@ -120,7 +120,7 @@ const InfoItem = styled.div`
   margin-bottom: 15px;
 
   svg {
-    color: red;
+    color: #00911a;
     margin-right: 30px;
     font-size: 25px;
   }
@@ -166,7 +166,7 @@ const Titleh3 = styled.h3`
     display: block;
     width: 50px;
     height: 3px;
-    background: red;
+    background: #00911a;
     margin-top: 5px;
   }
 `;
@@ -192,7 +192,7 @@ const DateBox = styled.div`
   span {
     display: block;
     font-size: 12px;
-    background: red;
+    background: #00911a;
     padding: 2px;
     color:White;
           margin-top:5px;
@@ -228,7 +228,7 @@ const SocialIcons = styled.div`
 
 
     &:hover {
-      background: red;
+      background: #00911a;
     }
   }
 
@@ -285,19 +285,19 @@ export default function Contact() {
         <InfoContainer>
           <InfoItem>
             <FaMapMarkerAlt />
-            <span>Chennai - Krishnagiri Byepass Road, V.C Mottur, Walsjah - 632 513</span>
+            <span>Thuthipet sector, Periyavarikkam, Ambur, Tamil Nadu - 635811</span>
           </InfoItem>
           <InfoItem>
             <FaPhone />
-            <span>+91 - 04172 - 274812, 274180, 271203</span>
+            <span>+91 9150148628</span>
           </InfoItem>
           <InfoItem>
             <FaEnvelope />
-            <span>tranitec@rediffmail.com</span>
+            <span>info@amburtec.com</span>
           </InfoItem>
           <InfoItem>
             <FaGlobe />
-            <span>www.ranitec.com</span>
+            <span>www.amburtec.com</span>
           </InfoItem>
           <InfoItem>
             <FaClock />
@@ -316,7 +316,7 @@ export default function Contact() {
         <Titleh3>Latest News</Titleh3>
         <NewsContainer>
           <DateBox>
-            02 <span>OCT</span>
+            05 <span>APR</span>
           </DateBox>
           <NewsText>
             <strong>Website Launch</strong>
@@ -347,13 +347,12 @@ export default function Contact() {
         <Titleh3>Locate Us</Titleh3>
         <ContactInfo>
           <p>
-            Chennai - Krishnagiri Bypass Road, V.C Mottur, Vannivedu Post,
-            Walajapet - 632 513
+          Thuthipet sector, Periyavarikkam, Ambur, Tamil Nadu - 635811
           </p>
-          <p><strong>Contact Person:</strong> D. Siva Kumar (General Manager)</p>
-          <p><strong>Phone Number:</strong> +91 - 04172 - 274812, 274180, 271203</p>
-          <p><strong>Email:</strong> tranitec@rediffmail.com</p>
-          <p><strong>Website:</strong> www.ranitec.com</p>
+          <p><strong>Contact Person:</strong>: D.B. Riyaz Ahmed (Assistant Manager)</p>
+          <p><strong>Phone Number:</strong>+91 9150148628</p>
+          <p><strong>Email:</strong>: info@amburtec.com</p>
+          <p><strong>Website:</strong> www.amburtec.com</p>
         </ContactInfo>
       </Section>
     </FooterContainer>

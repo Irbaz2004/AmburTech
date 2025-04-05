@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import { BreadCrumb } from '.././Components/BreadCrumb';
-import PFD from ".././assets/PFD.jpg"
+import { BreadCrumb } from '../../Components/BreadCrumb';
+import RO from "../../assets/P&ID RO_page-0001.jpg";
+import UF from "../../assets/P&ID UF_page-0001.jpg";
+import HPRO from "../../assets/P&ID HPRO_page-0001.jpg";
+// import PFD from "../../assets/PFD.jpg"
 
 
 const Title = styled.h1`
@@ -53,16 +56,44 @@ const StyledImage = styled.img`
     width: 95%;
   }
 `;
+const SubTitle = styled.h2`
+  text-decoration: underline;
+  padding: 20px 5vw;
+  font-size: 1.2rem;
+  font-family: "Gantari", serif;
+  position: relative;
 
-export default function Processflowdiagram() {
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size:.8rem;
+  }
+`;
+
+export default function RPro() {
   return (
     <>
        <BreadCrumb title='Process Flow Diagram' path='/zld/pretreatment/processflowdiagram' />
             <Title>Process Flow Diagram
               <hr />
             </Title>
+            <SubTitle>RO</SubTitle>
             <ImageContainer>
-              <StyledImage src={PFD} alt="Process Flow Diagram" />
+              <StyledImage src={RO} alt="RProcess Flow Diagram" />
+            </ImageContainer>
+
+            
+            <SubTitle>UF</SubTitle>
+            <ImageContainer>
+              <StyledImage src={UF} alt="RProcess Flow Diagram" />
+            </ImageContainer>
+
+            
+            <SubTitle>HPRO</SubTitle>
+            <ImageContainer>
+              <StyledImage src={HPRO} alt="RProcess Flow Diagram" />
             </ImageContainer>
     </>
   )

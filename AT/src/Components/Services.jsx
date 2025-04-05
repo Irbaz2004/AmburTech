@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AT03 from "../assets/AT03.jpg"
 import AT06 from "../assets/AT06.jpg"
 import AT07 from "../assets/AT07.jpg"
+import { Link } from "react-router-dom";
 
 const ServicesContainer = styled.div`
   min-height: 400px;
@@ -111,20 +112,29 @@ const ReadMoreButton = styled.button`
   width: 100%;
   background: rgb(255, 255, 255);
   border: none;
-  color: white;
+  color: black;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-top: 10px;
   cursor: pointer;
-  transition: background 0.3s;
-  color: black;
-  border-radius: 25px;
+  transition: all 0.3s;
   font-family: "Questrial", sans-serif;
+  
+  a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
   &:hover {
-    background: rgba(255, 255, 255, 0);
+    background: transparent;
     border: 1px solid white;
-    color: white;
+    
+    a {
+      color: white;
+    }
   }
 `;
 
@@ -146,9 +156,9 @@ export default function Services() {
           onMouseLeave={() => setHoveredCard(null)}
         >
           <div>
-            <h3>ZLD - Zero Liquid Discharge</h3>
+            <h3>Pre-Treatment</h3>
             <p>Recycle, reuse wastewater, eliminate all liquid discharge environmentally.</p>
-            <ReadMoreButton>Read More →</ReadMoreButton>
+            <ReadMoreButton><Link to={"/zld/pretreatment/gallery"}>Read More →</Link></ReadMoreButton>
           </div>
         </Card>
 
@@ -160,9 +170,9 @@ export default function Services() {
           onMouseLeave={() => setHoveredCard(null)}
         >
           <div>
-            <h3>SLF - Sanitary Landfilling</h3>
+            <h3>Reverse Osmosis</h3>
             <p>The delf supreme ruins appearance well layout.</p>
-            <ReadMoreButton>Read More →</ReadMoreButton>
+            <ReadMoreButton><Link to={"/zld/reverseosmosis/gallery"} >Read More →</Link></ReadMoreButton>
           </div>
         </Card>
 
@@ -174,9 +184,9 @@ export default function Services() {
           onMouseLeave={() => setHoveredCard(null)}
         >
           <div>
-            <h3>Effluent Treatment</h3>
+            <h3>Multiple Effect Evaporator</h3>
             <p>For ensuring regulatory compliance & environment.</p>
-            <ReadMoreButton>Read More →</ReadMoreButton>
+            <ReadMoreButton ><Link to={"/zld/multipleeffectevaporator/gallery"}>Read More →</Link></ReadMoreButton>
           </div>
         </Card>
       </CardContainer>

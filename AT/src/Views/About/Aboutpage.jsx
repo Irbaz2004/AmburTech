@@ -51,9 +51,30 @@ const Title = styled.h1`
     font-size: 1.3rem;
     text-align: start;
   }
-      hr {
+  hr {
     width: 200px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
+    margin-top: 5px;
+  }
+`;
+
+const Title1 = styled.h1`
+  font-size: 1.8rem;
+  font-family: "Gantari", serif;
+  margin-bottom: 10px;
+  margin-top: 130px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  hr {
+    width: 200px;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 `;
@@ -66,8 +87,8 @@ const Paragraph = styled.p`
   text-align: start;
 
   @media (max-width: 768px) {
- font-size: .8rem;
-     }
+    font-size: 0.8rem;
+  }
 `;
 
 const SliderContainer = styled.div`
@@ -182,7 +203,6 @@ const SubPara = styled.div`
   }
 `;
 
-
 export default function Aboutpage() {
   const settings = {
     dots: true,
@@ -192,7 +212,7 @@ export default function Aboutpage() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: true
+    arrows: true,
   };
 
   return (
@@ -200,14 +220,25 @@ export default function Aboutpage() {
       <BreadCrumb title="About Us" path="/about/statisticalprofile" />
       <AboutContainer>
         <AboutContent>
-          <Title>Welcome To Amburtec
-          <hr />
-          </Title>
+          <Title1>
+            Welcome To Amburtec
+            <hr />
+          </Title1>
           <Paragraph>
-            Amburtec is committed to innovation and sustainability, striving to
-            create eco-friendly solutions. Our mission is to empower individuals
-            and organizations through technology-driven initiatives, fostering a
-            greener future.
+            Ambur, a key leather cluster in Tamil Nadu, lies between Chennai and
+            Bangalore and has seen rapid growth due to the booming leather
+            industry. The town's economy is driven by tanneries and leather
+            product industries, with an annual turnover of ₹3000 crores. To
+            manage industrial wastewater, Ambur Tannery Effluent Treatment
+            Company Ltd. (AMBURTEC) established two CETPs. Due to strict Tamil
+            Nadu Pollution Control Board (TNPCB) norms, especially for Total
+            Dissolved Solids (TDS), a Zero Liquid Discharge (ZLD) system was
+            mandated. Implemented by Ambur Economic Development Organization
+            (AEDOL) at a cost of ₹29 crores, ZLD ensures water recovery and
+            environmental protection. However, high treatment costs challenge
+            sustainability. In 2013, due to concentrated effluents and
+            operational issues, TNPCB reduced the CETP’s capacity from 2219 KLD
+            to 1150 KLD.
           </Paragraph>
         </AboutContent>
         <SliderContainer>
@@ -222,60 +253,103 @@ export default function Aboutpage() {
       </AboutContainer>
 
       <Container>
-      <LeftDiv>
-        <Title>Environmental Policy</Title>
-        <p style={{textAlign:"initial"}}>AMBURTEC commits itself to Environmental projection while delivering its services to its customers through;</p>
-        
-        <SubPara>Process that are environment friendly;          </SubPara>
-          <SubPara>People who are trained to care for environment;          </SubPara>
-          <SubPara>Enabling to commitments to statutory and regulatory requirements;          </SubPara>
+        <LeftDiv>
+          <Title>Environmental Policy</Title>
+          <p style={{ textAlign: "initial" }}>
+            AMBURTEC commits itself to Environmental projection while delivering
+            its services to its customers through;
+          </p>
+
+          <SubPara>Process that are environment friendly; </SubPara>
+          <SubPara>People who are trained to care for environment; </SubPara>
+          <SubPara>
+            Enabling to commitments to statutory and regulatory requirements;{" "}
+          </SubPara>
           <SubPara>Enabling pollution prevention;</SubPara>
           <SubPara>Pursuit of Waste Minimisation,Recycle,Reuse;</SubPara>
-          <SubPara>Pursuit of Environmental Ethic of 4Rs - Reduce,Recycle,Recovery and Reuse;</SubPara>
+          <SubPara>
+            Pursuit of Environmental Ethic of 4Rs - Reduce,Recycle,Recovery and
+            Reuse;
+          </SubPara>
           <SubPara>Promotion of conservation of resources;</SubPara>
           <SubPara>Continual improvement of the processes.</SubPara>
-      </LeftDiv>
-      <RightDiv>
-        <Policy>
-          <Title>Quality Policy</Title>
-          <p style={{textAlign:"initial",lineHeight:"1.3"}}>To share the respoonsiblity for environmental protection with our customers, by putting every effort as a tream in every process of our organization to ensure satisfactory treatment of effluent as per statuary requirments.</p>
-        </Policy>
-        <Objective>
-          <Title>Quality Objective</Title>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To meet the stautory requirements of treated effluent as per plant design.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To Implement a sound quality assurance system and strictly adhere to it.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To ensure efficient operation and maintenance of plant in a cost effective manner.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To educate and encourage the member tanneries to adopt green tanning practices</p>
-        </Objective>
-      </RightDiv>
-    </Container>
+        </LeftDiv>
+        <RightDiv>
+          <Policy>
+            <Title>Quality Policy</Title>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To share the respoonsiblity for environmental protection with our
+              customers, by putting every effort as a tream in every process of
+              our organization to ensure satisfactory treatment of effluent as
+              per statuary requirments.
+            </p>
+          </Policy>
+          <Objective>
+            <Title>Quality Objective</Title>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To meet the stautory requirements of treated effluent as per plant
+              design.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To Implement a sound quality assurance system and strictly adhere
+              to it.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To ensure efficient operation and maintenance of plant in a cost
+              effective manner.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To educate and encourage the member tanneries to adopt green
+              tanning practices
+            </p>
+          </Objective>
+        </RightDiv>
+      </Container>
 
-    <Container>
-    <LeftDiv>
-        <Title>Quality Objectives</Title>
-        
-        <SubPara>In Q&M activities introduce pollution prevention programmes
-        </SubPara>
+      <Container>
+        <LeftDiv>
+          <Title>Quality Objectives</Title>
+
+          <SubPara>
+            In Q&M activities introduce pollution prevention programmes
+          </SubPara>
           <SubPara>Improve Water Management </SubPara>
           <SubPara>Improve Energy Managemen</SubPara>
           <SubPara>Improve Waste Management</SubPara>
           <SubPara>Green Belt</SubPara>
-      </LeftDiv>
+        </LeftDiv>
 
-      <RightDiv>
-        <Policy>
-          <Title>Latest News</Title>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To share the respoonsiblity for environmental protection with our customers, by putting every effort as a tream in every process of our organization to ensure satisfactory treatment of effluent as per statuary requirments.</p>
-        </Policy>
-        <Objective>
-          <Title>Quality Objective</Title>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To meet the stautory requirements of treated effluent as per plant design.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To Implement a sound quality assurance system and strictly adhere to it.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To ensure efficient operation and maintenance of plant in a cost effective manner.</p>
-          <p style={{textAlign:"initial" , lineHeight:"1.3"}}>To educate and encourage the member tanneries to adopt green tanning practices</p>
-        </Objective>
-      </RightDiv>
-    </Container>
-     </>
+        <RightDiv>
+          <Policy>
+            <Title>Latest News</Title>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To share the respoonsiblity for environmental protection with our
+              customers, by putting every effort as a tream in every process of
+              our organization to ensure satisfactory treatment of effluent as
+              per statuary requirments.
+            </p>
+          </Policy>
+          <Objective>
+            <Title>Quality Objective</Title>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To meet the stautory requirements of treated effluent as per plant
+              design.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To Implement a sound quality assurance system and strictly adhere
+              to it.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To ensure efficient operation and maintenance of plant in a cost
+              effective manner.
+            </p>
+            <p style={{ textAlign: "initial", lineHeight: "1.3" }}>
+              To educate and encourage the member tanneries to adopt green
+              tanning practices
+            </p>
+          </Objective>
+        </RightDiv>
+      </Container>
+    </>
   );
 }

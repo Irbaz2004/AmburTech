@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import {
   FaChevronDown,
+  FaChevronRight,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
@@ -84,7 +85,7 @@ const Logo = styled.img`
 const NavLinks = styled.ul`
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 40px;
   position: relative;
   font-family: "Questrial", serif;
 
@@ -123,11 +124,11 @@ const NavItem = styled.li`
   font-weight: 500;
 
   &:hover {
-    color: #ff5733;
+    color: #00911a;
   }
 
   &.active {
-    color: #ff5733;
+    color: #00911a;
     font-size: 18px;
   }
 
@@ -166,9 +167,41 @@ const DropdownMenu = styled.ul`
     transition: background 0.3s;
     font-family: "Questrial", serif;
     font-weight: 400;
+    position: relative;
 
     &:hover {
-      background: rgb(255, 0, 0);
+      background: #00911a;
+      color: white;
+    }
+  }
+`;
+
+// Nested Dropdown Menu
+const NestedDropdownMenu = styled.ul`
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  padding: 15px 10px;
+  border-radius: 5px;
+  width: 250px;
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
+  transform: translateX(${({ isOpen }) => (isOpen ? "0" : "-10px")});
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+
+  li {
+    padding: 13px 8px;
+    font-size: 14px;
+    color: #001f5f;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Questrial", serif;
+    font-weight: 400;
+
+    &:hover {
+      background: #00911a;
       color: white;
     }
   }
@@ -187,6 +220,7 @@ const MobileMenuIcon = styled(FaBars)`
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openNestedDropdown, setOpenNestedDropdown] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -196,6 +230,11 @@ const Navbar = () => {
   const handleDropdown = (index) => {
     if (window.innerWidth > 768) return;
     setOpenDropdown(openDropdown === index ? null : index);
+  };
+
+  const handleNestedDropdown = (index) => {
+    if (window.innerWidth > 768) return;
+    setOpenNestedDropdown(openNestedDropdown === index ? null : index);
   };
 
   const isActive = (path) => (location.pathname === path ? "active" : "");
@@ -262,39 +301,30 @@ const Navbar = () => {
               <Link to="/about/generalinformation">
                 <li>General Information</li>
               </Link>
-
               <Link to={"/about/statisticalprofile"}>
                 <li>Statistical Profile</li>
               </Link>
-
               <Link to={"/about/uniquefeaturesofthecetp"}>
                 <li>Unique Features of the CETP</li>
               </Link>
-
               <Link to={"/about/plantperformance"}>
                 <li>Plant Performance</li>
               </Link>
-
               <Link to={"/about/treatmentplantdata"}>
                 <li>Treatment Plant Data</li>
               </Link>
-
               <Link to={"/about/computerizedcetp"}>
                 <li>Computerized Operations & Management</li>
               </Link>
-
               <Link to={"/about/organizationchart"}>
                 <li>Organization Chart</li>
               </Link>
-
               <Link to={"/about/boardofdirectors"}>
                 <li>Board Of Directors</li>
               </Link>
-              
               <Link to={"/about/acknowledgement"}>
                 <li>Acknowledgement</li>
               </Link>
-
               <Link to={"/about/greenbeltdevelopment"}>
                 <li>Green Belt Development</li>
               </Link>
@@ -312,7 +342,7 @@ const Navbar = () => {
             Services <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 1}>
               <Link to={"/servicepage/pretreatmentsystem"}><li>Pre-Treatment System</li></Link>
-             <Link to={"/servicepage/statisticalprofile"}><li>Statistical Profile</li></Link> 
+              <Link to={"/servicepage/processdescription"}><li>Process Description</li></Link> 
             </DropdownMenu>
           </NavItem>
 
@@ -326,12 +356,47 @@ const Navbar = () => {
           >
             ZLD <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 2}>
-             <Link to={"/zld/pretreatment"}><li>Pre-Treatment</li></Link> 
-              <Link to={"/zld/reverseosmosis"}><li>Reverse Osmosis</li></Link>
-             <Link to={"/zld/multipleeffectevaporator"}><li>Multiple Effect Evaporator</li></Link> 
-             <Link to={"/zld/pretreatment/processflowdiagram"}><li>Process Flow Diagram</li></Link>
-             <Link to={"/zld/pretreatment/unitsizedesign"}><li>Unit Size & Design</li></Link>
-             <Link to={"/zld/pretreatment/gallery"}><li>Gallery</li></Link>
+              <li 
+                onMouseEnter={() => window.innerWidth > 768 && setOpenNestedDropdown(0)}
+                onMouseLeave={() => window.innerWidth > 768 && setOpenNestedDropdown(null)}
+                onClick={() => handleNestedDropdown(0)}
+              >
+                Pre-Treatment <FaChevronRight size={13} />
+                <NestedDropdownMenu isOpen={openNestedDropdown === 0 || (window.innerWidth <= 768 && openDropdown === 2 && openNestedDropdown === 0)}>
+                  {/* <Link to={"/zld/pretreatment"}><li>Overview</li></Link> */}
+                  <Link to={"/zld/pretreatment/processflowdiagram"}><li>Process Flow Diagram</li></Link>
+                  <Link to={"/zld/pretreatment/unitsizedesign"}><li>Unit Size & Design</li></Link>
+                  <Link to={"/zld/pretreatment/gallery"}><li>Gallery</li></Link>
+                </NestedDropdownMenu>
+              </li>
+
+              <li 
+                onMouseEnter={() => window.innerWidth > 768 && setOpenNestedDropdown(1)}
+                onMouseLeave={() => window.innerWidth > 768 && setOpenNestedDropdown(null)}
+                onClick={() => handleNestedDropdown(1)}
+              >
+                Reverse Osmosis <FaChevronRight size={13} />
+                <NestedDropdownMenu isOpen={openNestedDropdown === 1 || (window.innerWidth <= 768 && openDropdown === 2 && openNestedDropdown === 1)}>
+                  {/* <Link to={"/zld/reverseosmosis"}><li>Overview</li></Link> */}
+                  <Link to={"/zld/reverseosmosis/processflowdiagram"}><li>P&ID</li></Link>
+                  <Link to={"/zld/reverseosmosis/unit"}><li>Unit Size & Design</li></Link>
+                  <Link to={"/zld/reverseosmosis/gallery"}><li>Gallery</li></Link>
+                </NestedDropdownMenu>
+              </li>
+
+              <li 
+                onMouseEnter={() => window.innerWidth > 768 && setOpenNestedDropdown(2)}
+                onMouseLeave={() => window.innerWidth > 768 && setOpenNestedDropdown(null)}
+                onClick={() => handleNestedDropdown(2)}
+              >
+                Multiple Effect Evaporator <FaChevronRight size={13} />
+                <NestedDropdownMenu isOpen={openNestedDropdown === 2 || (window.innerWidth <= 768 && openDropdown === 2 && openNestedDropdown === 2)}>
+                  {/* <Link to={"/zld/multipleeffectevaporator"}><li>Overview</li></Link> */}
+                  <Link to={"/zld/multipleeffectevaporator/processflowdiagram"}><li>P&ID</li></Link>
+                  <Link to={"/zld/multipleeffectevaporator/unit"}><li>Unit Size & Design</li></Link>
+                  <Link to={"/zld/multipleeffectevaporator/gallery"}><li>Gallery</li></Link>
+                </NestedDropdownMenu>
+              </li>
             </DropdownMenu>
           </NavItem>
 
@@ -346,7 +411,6 @@ const Navbar = () => {
             Testing Lab <FaChevronDown size={13} />
             <DropdownMenu isOpen={openDropdown === 3}>
               <Link to={"/testinglab/introduction"}><li>Introduction</li></Link>
-              <Link to={"/testinglab/viewofmodernequipe"}><li>View Of Modern Equipment</li></Link>
             </DropdownMenu>
           </NavItem>
 
@@ -358,12 +422,26 @@ const Navbar = () => {
             <Link to="/slf">SLF</Link>
           </NavItem>
 
-          <NavItem className={isActive("/annual-returns")}>
+          {/* <NavItem className={isActive("/annual-returns")}>
             <Link to="/annualreturn">Annual Returns</Link>
-          </NavItem>
+          </NavItem> */}
 
-          <NavItem className={isActive("/projects")}>
-            <Link to="/projects">Projects</Link>
+          <NavItem 
+            onMouseEnter={() => window.innerWidth > 768 && setOpenDropdown(4)}
+            onMouseLeave={() =>
+              window.innerWidth > 768 && setOpenDropdown(null)
+            }
+            onClick={() => handleDropdown(4)}
+            className={isActive("/projects")}
+          >
+            Projects <FaChevronDown size={13} />
+            <DropdownMenu isOpen={openDropdown === 4}>
+            <Link to={"/projects/cetp"}><li>Establishment of CETP – 1995</li></Link>
+            <Link to={"/projects/iius"}><li>IIUS – 2008</li></Link>
+              <Link to={"/projects/ifladp"}><li>IFLADP - 2018</li></Link>
+              <Link to={"/projects/step"}><li>STEP Scheme – 2025</li></Link>
+
+            </DropdownMenu>
           </NavItem>
 
           <NavItem className={isActive("/contact-us")}>

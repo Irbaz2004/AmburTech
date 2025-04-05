@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import { BreadCrumb } from '.././Components/BreadCrumb';
-import PFD from ".././assets/PFD.jpg"
+import { BreadCrumb } from '../../Components/BreadCrumb';
+import MEE from "../../assets/MEE P&I DIAGRAM_page-0001.jpg";
+import ATFD from "../../assets/ATFD P&ID_page-0001.jpg";
 
 
 const Title = styled.h1`
@@ -54,15 +55,41 @@ const StyledImage = styled.img`
   }
 `;
 
-export default function Processflowdiagram() {
+const SubTitle = styled.h2`
+  text-decoration: underline;
+  padding: 20px 5vw;
+  font-size: 1.2rem;
+  font-family: "Gantari", serif;
+  position: relative;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size:.8rem;
+  }
+`;
+
+
+export default function MPro() {
   return (
     <>
        <BreadCrumb title='Process Flow Diagram' path='/zld/pretreatment/processflowdiagram' />
             <Title>Process Flow Diagram
               <hr />
             </Title>
+
+
+            <SubTitle>MEE</SubTitle>
             <ImageContainer>
-              <StyledImage src={PFD} alt="Process Flow Diagram" />
+              <StyledImage src={MEE} alt="MProcess Flow Diagram" />
+            </ImageContainer>
+
+            
+            <SubTitle>MEE+ATFD</SubTitle>
+            <ImageContainer>
+              <StyledImage src={ATFD} alt="MProcess Flow Diagram" />
             </ImageContainer>
     </>
   )

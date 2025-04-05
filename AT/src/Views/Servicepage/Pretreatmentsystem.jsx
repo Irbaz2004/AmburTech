@@ -7,8 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PTS01 from "../../assets/PTS01.jpg";
 import PTS02 from "../../assets/PTS02.jpg";
-import PTS03 from "../../assets/PTS03.jpg";
-import PTS04 from "../../assets/PTS04.jpg";
 import PTS05 from "../../assets/PTS05.jpg";
 import PTS06 from "../../assets/PTS06.jpg";
 
@@ -45,7 +43,7 @@ const Title = styled.h1`
 
   hr {
     width: 170px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 
@@ -76,32 +74,42 @@ const Paragraph = styled.p`
  padding: 0 10px;
      }
 `;
-
 const SliderContainer = styled.div`
   flex: 1;
   max-width: 50%;
   position: relative;
   margin-top: 120px;
+  height: 400px; /* Set a fixed height or use aspect ratio */
+  width: 100%;
 
   @media (max-width: 1024px) {
     max-width: 100%;
     margin-top: 20px;
+    height: 350px;
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+  }
+
+  /* Target the slick slider elements */
+  .slick-slider, 
+  .slick-list, 
+  .slick-track, 
+  .slick-slide > div {
+    height: 100%;
   }
 `;
 
 const SlideImage = styled.img`
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
-
-  @media (max-width: 768px) {
-    height: 250px;
-  }
-
-  @media (max-width: 480px) {
-    height: 200px;
-  }
 `;
 
 const List = styled.ul`
@@ -160,7 +168,7 @@ export default function Pretreatmentsystem() {
 
         <SliderContainer>
           <Slider {...settings}>
-            {[PTS01,PTS02,PTS03,PTS04,PTS05,PTS06].map((img, index) => (
+            {[PTS01,PTS02,PTS05,PTS06].map((img, index) => (
               <div key={index}>
                 <SlideImage src={img} alt={`Slide ${index + 1}`} />
               </div>

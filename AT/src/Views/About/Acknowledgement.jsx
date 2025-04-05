@@ -9,10 +9,9 @@ const Title = styled.h1`
   position: relative;
   margin-top: 130px;
 
-  
-      hr {
+  hr {
     width: 170px;
-    border: 2px solid red;
+    border: 2px solid #00911a;
     margin-top: 5px;
   }
 
@@ -32,7 +31,7 @@ const Para = styled.p`
   color: gray;
   position: relative;
   @media (max-width: 768px) {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 10px 20px;
   }
 `;
@@ -41,7 +40,8 @@ export default function Acknowledgement() {
   return (
     <>
       <BreadCrumb title="Acknowledgement" path="/about/acknowledgement" />
-      <Title>Acknowledgement
+      <Title>
+        Acknowledgement
         <hr />
       </Title>
       <Para>
@@ -50,10 +50,10 @@ export default function Acknowledgement() {
       </Para>
       <Para>
         The CETP wishes to acknowledge the technical support received from the
-        Central Leather Research Institute (CLRI), National Environmental
-        Engineering Research Institute (NEERI), Chennai Environmental Management
-        Company of Tanners (CEMCOT), Indian Leather Industry Foundation (ILIFO)
-        and Several Other Organizations.
+        Central Leather Research Institute (CLRI), AMBUR ECONOMIC DEVELOPMENT
+        ORGANIZATION (AEDOL), Chennai Environmental Management Company of
+        Tanners (CEMCOT), Indian Leather Industry Foundation (ILIFO) and Several
+        Other Organizations.
       </Para>
       <Para>
         The CETP also thanks the Ministry of Commerce and Industry (MoC&I),

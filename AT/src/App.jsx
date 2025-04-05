@@ -15,15 +15,25 @@ import ComputerizedCETP from "./Views/About/ComputerizedCETP";
 import Acknowledgement from "./Views/About/Acknowledgement";
 import UniquefeaturesoftheCETP from "./Views/About/UniquefeaturesoftheCETP";
 import Pretreatmentsystem from "./Views/Servicepage/Pretreatmentsystem";
+import Processdescription from "./Views/Servicepage/Processdescription";
 import Pretreatement from "./Views/ZLD/Pretreatement";
 import Reverseosmosis from "./Views/ZLD/Reverseosmosis";
 import Multipleeffectevaporator from "./Views/ZLD/Multipleeffectevaporator";
+import RPro from "./Views/ZLD/RPro";
+import MPro from "./Views/ZLD/MPro";
+import RGallery from "./Views/ZLD/RGallery";
+import MGallery from "./Views/ZLD/MGallery";
+import RUnit from "./Views/ZLD/RUnit";
+import MUnit from "./Views/ZLD/MUnit";
 import Introduction from "./Views/TestingLab/Introduction";
-import Viewofmodernequipe from "./Views/TestingLab/Viewofmodernequipe";
 import Membertanneries from "./Views/Membertanneries";
 import Slf from "./Views/Slf";
 import Annualreturn from "./Views/Annualreturn";
-import Projects from "./Views/Projects";
+// import Projects from "./Views/Projects";
+import CETP from "./Views/Project/CETP ";
+import IFLADP from "./Views/Project/IFLADP ";
+import IIUS from "./Views/Project/IIUS ";
+import STEP from "./Views/Project/STEP ";
 import Contact from "./Views/Contact";
 import Processflowdiagram from "./Views/Processflowdiagram";
 import Unitsizedesign from "./Views/Unitsizedesign";
@@ -64,24 +74,37 @@ function App() {
             <Route path="/about/uniquefeaturesofthecetp" element={<UniquefeaturesoftheCETP />} />
 
             <Route path="/servicepage/pretreatmentsystem" element={<Pretreatmentsystem />} />
-            <Route path="/servicepage/statisticalprofile" element={<Statisticalprofile />} />
+            <Route path="/servicepage/processdescription" element={<Processdescription />} />
+            {/* <Route path="/servicepage/statisticalprofile" element={<Statisticalprofile />} /> */}
 
             <Route path="/zld/pretreatment" element={<Pretreatement />} />
+            <Route path="/zld/pretreatment/processflowdiagram" element={<Processflowdiagram />} />
+            <Route path="/zld/pretreatment/unitsizedesign" element={<Unitsizedesign />} />
+            <Route path="/zld/pretreatment/gallery" element={<Gallery />} />
+
             <Route path="/zld/reverseosmosis" element={<Reverseosmosis />} />
+            <Route path="/zld/reverseosmosis/processflowdiagram" element={<RPro />} />
+            <Route path="/zld/reverseosmosis/gallery" element={<RGallery />} />
+            <Route path="/zld/reverseosmosis/unit" element={<RUnit />} />
+
             <Route path="/zld/multipleeffectevaporator" element={<Multipleeffectevaporator />} />
+            <Route path="/zld/multipleeffectevaporator/processflowdiagram" element={<MPro />} />
+            <Route path="/zld/multipleeffectevaporator/gallery" element={<MGallery />} />
+            <Route path="/zld/multipleeffectevaporator/unit" element={<MUnit />} />
 
             <Route path="/testinglab/introduction" element={<Introduction />} />
-            <Route path="/testinglab/viewofmodernequipe" element={<Viewofmodernequipe />} />
 
             <Route path="/membertanneries" element={<Membertanneries />} />
             <Route path="/slf" element={<Slf />} />
             <Route path="/annualreturn" element={<Annualreturn />} />
-            <Route path="/projects" element={<Projects />} />
+
+            <Route path="/projects/cetp" element={<CETP />} />
+            <Route path="/projects/ifladp" element={<IFLADP />} />
+            <Route path="/projects/iius" element={<IIUS />} />
+            <Route path="/projects/step" element={<STEP />} />
+
             <Route path="/contact" element={<Contact />} />
 
-            <Route path="/zld/pretreatment/processflowdiagram" element={<Processflowdiagram />} />
-            <Route path="/zld/pretreatment/unitsizedesign" element={<Unitsizedesign />} />
-            <Route path="/zld/pretreatment/gallery" element={<Gallery />} />
 
 
           </Routes>

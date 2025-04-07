@@ -13,7 +13,7 @@ const Title = styled.h1`
   margin-top: 130px;
 
      hr {
-    width: 170px;
+    width: 300px;
     border: 2px solid #00911a;
     margin-top: 5px;
   }
@@ -76,7 +76,7 @@ export default function MPro() {
   return (
     <>
        <BreadCrumb title='Process Flow Diagram' path='/zld/pretreatment/processflowdiagram' />
-            <Title>Process Flow Diagram
+            <Title>Piping & Intrumentation Diagram
               <hr />
             </Title>
 
@@ -87,7 +87,7 @@ export default function MPro() {
             </ImageContainer>
 
             
-            <SubTitle>MEE+ATFD</SubTitle>
+            <SubTitle>ATFD</SubTitle>
             <ImageContainer>
               <StyledImage src={ATFD} alt="MProcess Flow Diagram" />
             </ImageContainer>

@@ -19,11 +19,14 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: "Gantari", serif;
   color: white;
   font-weight: 600;
   margin-bottom: 10px;
+  color:#00911a;
+    font-style: italic;
+
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
@@ -32,8 +35,7 @@ const Title = styled.h2`
 
 const Highlight = styled.span`
   font-weight: 600;
-  color: #00911a;
-  font-style: italic;
+  color: #fff;
   font-size: 1.3rem;
 `;
 
@@ -53,7 +55,9 @@ const Description = styled.p`
 export default function Author() {
   return (
     <Container>
-      <Title>Founder Of AMBURTEC</Title>
+      <Title>Honoring the Legacy of Late Mr. N. Mohammed Sayeed Sahib
+Promoter and Former Managing Director of Amburtec
+</Title>
       <Description>
         <Highlight>Late Mr. N. Mohammed Sayeed Sahib</Highlight> , a distinguished leader in the leather industry,
         was a visionary with exceptional practical knowledge and foresight. His relentless dedication, perseverance,

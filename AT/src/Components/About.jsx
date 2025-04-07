@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaProjectDiagram, FaIndustry, FaCogs, FaUsers, FaLaptopCode, FaUsersCog } from 'react-icons/fa';
+import {  FaIndustry, FaCogs, FaUsers, FaLaptopCode,FaThumbsUp } from 'react-icons/fa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -180,16 +180,12 @@ export default function About() {
         <Button to="/about">Read More</Button>
         <SliderWrapper>
   <Slider {...sliderSettings}>
-    <StatCard>
-      <IconWrapper><FaProjectDiagram /></IconWrapper>
-      <StatNumber>+17</StatNumber>
-      <StatText>Successful projects setting industry benchmarks.</StatText>
-    </StatCard>
+   
     
     <StatCard>
       <IconWrapper><FaIndustry /></IconWrapper>
       <StatNumber>30</StatNumber>
-      <StatText>Years of innovation in water treatment technology.</StatText>
+      <StatText>Years Of Experience</StatText>
     </StatCard>
 
     <StatCard>
@@ -210,11 +206,13 @@ export default function About() {
       <StatText>Cutting-edge technologies powering efficient systems.</StatText>
     </StatCard>
 
+
     <StatCard>
-      <IconWrapper><FaUsersCog /></IconWrapper>
-      <StatNumber>+75</StatNumber>
-      <StatText>Skilled members working across multiple departments.</StatText>
+      <IconWrapper><FaThumbsUp /></IconWrapper>
+      <StatNumber>47</StatNumber>
+      <StatText>Member Tanners</StatText>
     </StatCard>
+
   </Slider>
 </SliderWrapper>
 

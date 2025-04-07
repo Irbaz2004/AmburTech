@@ -27,7 +27,29 @@ const Title = styled.h1`
       width: 100px;}
   }
 `;
+const Title2 = styled.h1`
+  margin-left:-5px;
+  font-size: 1.6rem;
+  font-family: "Gantari", serif;
+  position: relative;
 
+  hr {
+    width: 170px;
+    border: 2px solid #00911a;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    hr{
+      width: 100px;}
+  }
+`;
 const List = styled.ul`
   padding: 10px 80px;
   font-size: 1rem;
@@ -100,7 +122,10 @@ export default function Introduction() {
 <Container>
   
   
-<SubTitle>View Of Modern Equipment</SubTitle>
+<Title2>
+View Of Modern Equipment
+        <hr />
+      </Title2>
  <ImageContainer>
       <ImageItem src={TLE01} alt="Test image" />
       </ImageContainer>

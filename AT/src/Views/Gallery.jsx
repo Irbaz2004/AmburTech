@@ -15,6 +15,8 @@ import G11 from "../assets/G11 Secondary Clarifier.png"
 import G12 from "../assets/G12 Tertiary Clarifier.jpg"
 import G13 from "../assets/G13 Pelletizer & Circulation Pumps.png"
 import G14 from "../assets/G14 Auto Disc Filter.png"
+import G23 from "../assets/G23 Overhead Tank of capacity 5 lakh litres.jpg";
+
 const Title = styled.h1`
   padding: 20px 5vw;
   font-size: 1.6rem;
@@ -102,6 +104,7 @@ export default function Gallery() {
         { src: G12, title: "  Tertiary Clarifier" },
         { src: G13, title: "  Pelletizer & Circulation Pumps" },
         { src: G14, title: "  Auto Disc Filter" },
+        { src: G23, title: " Overhead Tank of capacity 5 lakh litres" },
     ];
   return (
     <>

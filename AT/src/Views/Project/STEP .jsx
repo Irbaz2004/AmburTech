@@ -85,7 +85,7 @@ export default function STEP() {
         Projects <hr />
       </Title>
 
-      <SubTitle>Proposal under STEP Scheme – 2025</SubTitle>
+      <SubTitle>STEP Scheme – 2025</SubTitle>
       <TableWrapper>
         <StyledTable>
           <thead>

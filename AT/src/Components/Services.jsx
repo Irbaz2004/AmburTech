@@ -157,7 +157,7 @@ export default function Services() {
         >
           <div>
             <h3>Pre-Treatment</h3>
-            <p>Recycle, reuse wastewater, eliminate all liquid discharge environmentally.</p>
+            <p>All trade effluent undergoes Screening and Sedimentation in a Pre-Treatment Unit (PTU) before discharge into the CETP sewer line.</p>
             <ReadMoreButton><Link to={"/zld/pretreatment/gallery"}>Read More →</Link></ReadMoreButton>
           </div>
         </Card>
@@ -171,7 +171,9 @@ export default function Services() {
         >
           <div>
             <h3>Reverse Osmosis</h3>
-            <p>The delf supreme ruins appearance well layout.</p>
+            <p>Reverse osmosis(RO) is a water purification technology that uses a semipermeable membrane to remove ions,molecules and larger particles from water
+
+</p>
             <ReadMoreButton><Link to={"/zld/reverseosmosis/gallery"} >Read More →</Link></ReadMoreButton>
           </div>
         </Card>
@@ -185,7 +187,7 @@ export default function Services() {
         >
           <div>
             <h3>Multiple Effect Evaporator</h3>
-            <p>For ensuring regulatory compliance & environment.</p>
+            <p>The Multiple effect Evaporator for concentrating the reject water and thereby recovering condensate water of good quality. The liquor is further concentrated with centrifuge followed by ATFD., thereby achieving Zero Liquid Discharge.</p>
             <ReadMoreButton ><Link to={"/zld/multipleeffectevaporator/gallery"}>Read More →</Link></ReadMoreButton>
           </div>
         </Card>

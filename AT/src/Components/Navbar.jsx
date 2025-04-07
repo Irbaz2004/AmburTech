@@ -274,7 +274,7 @@ const Navbar = () => {
           <FaLinkedinIn />
         </SocialIcons>
         <ContactInfo>
-          <FaPhone /> <span>+91 82206 99796</span>
+          <FaPhone /> <span>+91 9150148628</span>
           <FaEnvelope /> <span>info@amburtec.com</span>
         </ContactInfo>
       </TopBar>

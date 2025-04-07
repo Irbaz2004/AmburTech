@@ -53,7 +53,7 @@ const Table = styled.table`
   }
 
   th {
-       background: red;
+       background: #00911a;
     color: white;
   }
  td:hover {

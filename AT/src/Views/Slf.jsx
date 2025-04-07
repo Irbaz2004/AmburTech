@@ -19,7 +19,7 @@ const Title = styled.h1`
   margin-top: 130px;
 
   hr {
-    width: 30px;
+    width: 150px;
     border: 2px solid #00911a;
     margin-top: 5px;
   }
@@ -35,16 +35,15 @@ const Title = styled.h1`
 `;
 
 const DataContainer = styled.div`
-  padding: 20px 5vw;
-  font-size: 1.2rem;
+  padding: 20px;
+  font-size: 1rem;
   font-family: "Gantari", serif;
   position: relative;
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px;
-  background-color: #f9f9f9;
+  margin-top: -10px;
+  background-color:rgb(255, 255, 255);
   border-radius: 4px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
     font-size: 1rem;
     width: 100%;
@@ -57,10 +56,10 @@ const DataContainer = styled.div`
 `;
 
 const Para = styled.p`
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-family: "Gantari", serif;
   padding: 10px 0;
-  color: gray;
+  color: black;
   @media (max-width: 768px) {
     font-size: 0.7rem;
     width: 500%;
@@ -74,7 +73,13 @@ const SubTitle = styled.h2`
   font-family: "Gantari", serif;
   position: relative;
 `;
-
+const SubTitle2 = styled.h2`
+  text-decoration: underline;
+  padding: 0px;
+  font-size: 1.2rem;
+  font-family: "Gantari", serif;
+  position: relative;
+`;
 const Container = styled.div`
   padding: 20px 5vw;
   font-size: 1.2rem;
@@ -119,7 +124,7 @@ export default function Slf() {
     <>
       <BreadCrumb title="SLF" path="/slf" />
       <Title>
-        SLF <hr />
+        Secured Land Fill <hr />
       </Title>
 
       <DataContainer>
@@ -151,7 +156,7 @@ export default function Slf() {
       </DataContainer>
 
       <Container>
-        <SubTitle>SLF Gallery</SubTitle>
+        <SubTitle2>SLF Gallery</SubTitle2>
         <ImageGrid>
           <ImageItem src={slf1} />
           <ImageItem src={slf2} />

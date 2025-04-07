@@ -80,10 +80,10 @@ const ImageTitle = styled.p`
 
 export default function RGallery() {
     const images = [
+      { src: G16, title: " RO Plant" },
+      { src: G18, title: " 3rd Stage RO Plant" },
         { src: G15, title: " Ultra Filtration System" },
-        { src: G16, title: " RO Plant" },
         { src: G17, title: " Chemical Dosing Section" },
-        { src: G18, title: " 3rd Stage RO Plant" },
     ];
   return (
     <>

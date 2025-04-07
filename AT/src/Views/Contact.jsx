@@ -330,11 +330,7 @@ export default function Contact() {
           </InfoItem>
           <InfoItem>
             <FaClock />
-            <span>Monday - Friday: 9.30 AM to 5.30 PM</span>
-          </InfoItem>
-          <InfoItem>
-            <FaClock />
-            <span>Saturday: 9.30 AM to 2 PM</span>
+            <span>Monday - Saturday: 9.30 AM to 5.30 PM</span>
           </InfoItem>
         </InfoContainer>
       </ContactContainer>
@@ -345,7 +341,7 @@ export default function Contact() {
         <Titleh3>Latest News</Titleh3>
         <NewsContainer>
           <DateBox>
-            05 <span>APR</span>
+            07 <span>APR</span>
           </DateBox>
           <NewsText>
             <strong>Website Launch</strong>

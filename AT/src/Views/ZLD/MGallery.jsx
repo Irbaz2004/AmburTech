@@ -4,8 +4,6 @@ import { BreadCrumb } from "../../Components/BreadCrumb";
 import G19 from "../../assets/G19 Multiple Effect Evaporator Plant.jpg";
 import G20 from "../../assets/G20 Boiler Plant.png";
 import G21 from "../../assets/G21 Salt Godown.jpg";
-import G22 from "../../assets/G22 Solar Plant.jpg";
-import G23 from "../../assets/G23 Overhead Tank of capacity 5 lakh litres.jpg";
 
 const Title = styled.h1`
   padding: 20px 5vw;
@@ -84,8 +82,6 @@ export default function MGallery() {
         { src: G19, title: "Multiple Effect Evaporator Plant" },
         { src: G20, title: "Boiler Plant" },
         { src: G21, title: "Salt Godown" },
-        { src: G22, title: "Solar Plant" },
-        { src: G23, title: "Overhead Tank of capacity 5 lakh litres" },
     
     ];
   return (

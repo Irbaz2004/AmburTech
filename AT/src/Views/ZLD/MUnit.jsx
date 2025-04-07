@@ -53,7 +53,7 @@ const Table = styled.table`
   }
 
   th {
-       background: red;
+       background: #00911a;
     color: white;
   }
  td:hover {
@@ -65,19 +65,21 @@ const Table = styled.table`
 
 export default function MUnit() {
   const data = [
-    { no: 1, name: "Cooling Tower", units: 1, dimensions: "7.7m x 10.29m x 2.06m" },
-    { no: 2, name: "MEE Feed Tank", units: 1, dimensions: "10.35m x 12m x 3.3m" },
-    { no: 3, name: "Condensate Storage Tank", units: 1, dimensions: "13.45m x 3.5m x 3.3m" },
-    { no: 4, name: "Multiple Effect Evaporator (7 Effect (3FF+4FC))", units: 1, dimensions: "700 KLD" },
-    { no: 5, name: "ATFD", units: 1, dimensions: "1.0 KL/Hr" },
-    { no: 6, name: "ATFD Feed Tank", units: 1, dimensions: "Inner dia-1750 mm - Height 2100mm" },
-    { no: 7, name: "RCC Acid Tank", units: 1, dimensions: "6.5m x 4.3m x 3.3m" },
-    { no: 8, name: "RCC Alkali Tank", units: 1, dimensions: "6.5m x 4.3m x 3.3m" },
-    { no: 9, name: "RCC CIP Tank", units: 1, dimensions: "6.5m x 4m x 3.3m" },
-    { no: 10, name: "Boiler Feed Water Tank", units: 1, dimensions: "20 KL" },
-    { no: 11, name: "Boiler Shed", units: 1, dimensions: "21.45m x 12m x 11m" },
-    { no: 12, name: "Boiler Coal Yard Shed", units: 1, dimensions: "10m x 10.75m x 5.5m" },
-    { no: 13, name: "Salt Godown", units: 1, dimensions: "30.5m x 15.2m x 4.0m" }
+    {no:1, name:"MEE + ATFD Building", units: 1, dimensions: "34.5m x 9m x 22m"},
+    { no: 2, name: "MEE Panel Room", units: 1, dimensions: "10m x 8m x 4m" },
+    { no: 3, name: "MEE Feed Tank", units: 1, dimensions: "10.35m x 12m x 3.3m" },
+    { no: 4, name: "Condensate Storage Tank", units: 1, dimensions: "13.45m x 3.5m x 3.3m" },
+    { no: 5, name: "Cooling Tower", units: 1, dimensions: "7.7m x 10.29m x 2.06m" },
+    { no: 6, name: "Multiple Effect Evaporator (7 Effect (3FF+4FC))", units: 1, dimensions: "700 KLD" },
+    { no: 7, name: "ATFD", units: 1, dimensions: "1.0 KL/Hr" },
+    { no: 8, name: "ATFD Feed Tank", units: 1, dimensions: "Inner dia-1750 mm - Height 2100mm" },
+    { no: 9, name: "RCC Acid Tank", units: 1, dimensions: "6.5m x 4.3m x 3.3m" },
+    { no: 10, name: "RCC Alkali Tank", units: 1, dimensions: "6.5m x 4.3m x 3.3m" },
+    { no: 11, name: "RCC CIP Tank", units: 1, dimensions: "6.5m x 4m x 3.3m" },
+    { no: 12, name: "Boiler Feed Water Tank", units: 1, dimensions: "20 KL" },
+    { no: 13, name: "Boiler Shed", units: 1, dimensions: "21.45m x 12m x 11m" },
+    { no: 14, name: "Coal Yard Shed", units: 1, dimensions: "10m x 10.75m x 5.5m" },
+    { no: 15, name: "Salt Godown", units: 1, dimensions: "30.5m x 15.2m x 4.0m" }
   ];
   
       

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import AT03 from "../assets/AT03.jpg"
-import AT06 from "../assets/AT06.jpg"
-import AT07 from "../assets/AT07.jpg"
+import G1 from "../assets/G1.jpg"
+import G15 from "../assets/G16 RO Plant.jpg"
+import G19 from "../assets/G19 Multiple Effect Evaporator Plant.jpg"
 import { Link } from "react-router-dom";
 
 const ServicesContainer = styled.div`
@@ -149,7 +149,7 @@ export default function Services() {
       </TextWrapper>
       <CardContainer>
         <Card
-          style={{ backgroundImage: `url(${AT03})` }}
+          style={{ backgroundImage: `url(${G1})` }}
           isHovered={hoveredCard === 1}
           hoveredCard={hoveredCard}
           onMouseEnter={() => setHoveredCard(1)}
@@ -163,7 +163,7 @@ export default function Services() {
         </Card>
 
         <Card
-          style={{ backgroundImage: `url(${AT07})`}}
+          style={{ backgroundImage: `url(${G15})`}}
           isHovered={hoveredCard === 2}
           hoveredCard={hoveredCard}
           onMouseEnter={() => setHoveredCard(2)}
@@ -177,7 +177,7 @@ export default function Services() {
         </Card>
 
         <Card
-          style={{ backgroundImage: `url(${AT06})` }}
+          style={{ backgroundImage: `url(${G19})` }}
           isHovered={hoveredCard === 3}
           hoveredCard={hoveredCard}
           onMouseEnter={() => setHoveredCard(3)}

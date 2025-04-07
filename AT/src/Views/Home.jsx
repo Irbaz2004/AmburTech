@@ -4,12 +4,13 @@ import About from '../Components/About'
 import Services from '../Components/Services'
 import Treatments from '../Components/Treatments'
 import Projects from '../Components/Projects'
-import Footer from '../Components/Footer'
+import Author from '../Components/Author'
 export default function Home() {
   return (
     <>
       <Hero/>
       <About/>
+      <Author/>
       <Services/>
       <Treatments/>
       <Projects/>

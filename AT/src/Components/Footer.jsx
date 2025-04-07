@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import AT05 from "../assets/AT05.jpg";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -220,23 +221,23 @@ export default function Footer() {
         </LeftSection>
 
         <RightSection>
-          <LinksContainer>
-            <Column>
-              <h4>LINKS</h4>
-              <a href="#">ABOUT US</a>
-              <a href="#">PROJECTS</a>
-              <a href="#">SERVICES</a>
-              <a href="#">PROCESS</a>
-            </Column>
+        <LinksContainer>
+  <Column>
+    <h4>LINKS</h4>
+    <Link to="/about">ABOUT US</Link>
+    <Link to="/projects/cetp">PROJECTS</Link>
+    <Link to="/servicepage/pretreatmentsystem">SERVICES</Link>
+    <Link to="/servicepage/processdescription">PROCESS</Link>
+  </Column>
 
-            <Column>
-              <h4>SOCIAL MEDIA</h4>
-              <a href="#">TWITTER</a>
-              <a href="#">INSTAGRAM</a>
-              <a href="#">FACEBOOK</a>
-              <a href="#">LINKEDIN</a>
-            </Column>
-          </LinksContainer>
+  <Column>
+    <h4>SOCIAL MEDIA</h4>
+    <Link to="/twitter">TWITTER</Link>
+    <Link to="/instagram">INSTAGRAM</Link>
+    <Link to="/facebook">FACEBOOK</Link>
+    <Link to="/linkedin">LINKEDIN</Link>
+  </Column>
+</LinksContainer>
         </RightSection>
       </FooterContent>
 

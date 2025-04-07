@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -96,6 +97,10 @@ const HeroButtonExplore = styled.button`
   border-radius: 3px;
     font-family: "Gantari", serif;
 
+    a{
+    color: #fff;
+    }
+
 
   &:hover {
     text-decoration: none;
@@ -119,11 +124,21 @@ const HeroButtonContact = styled.button`
   border-radius: 3px;
     font-family: "Gantari", serif;
 
+  a {
+    text-decoration: none;
+    color: black;
+}
+
 
   &:hover {
     color: white;
     background-color: black;
+
   }
+    a:hover {
+    color: white;
+}
+
 
   @media (max-width: 480px) {
     width: 100%;
@@ -256,8 +271,8 @@ const Hero = () => {
             expertise, and commitment to a cleaner future.
           </HeroSubtitle>
           <ButtonContainer>
-            <HeroButtonContact primary>Contact Us</HeroButtonContact>
-            <HeroButtonExplore>Explore Projects</HeroButtonExplore>
+            <HeroButtonContact primary><Link to={'/contact'}>Contact Us</Link></HeroButtonContact>
+            <HeroButtonExplore><Link to={'/projects/cetp'}>Explore Projects</Link></HeroButtonExplore>
           </ButtonContainer>
         </HeroContent>
       </HeroOverlay>

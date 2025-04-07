@@ -130,7 +130,7 @@ export default function Slf() {
       <DataContainer>
         <Para>
           Construction of a Secure Land Fill System (SLF) with a capacity of
-          96,000 ton at a cost of Rs.78.53 million under the ASIDE scheme with
+          88,000 ton at a cost of Rs.72 million under the ASIDE scheme with
           the technical assistance from Central Leather Research Institute
           (CLRI).
         </Para>

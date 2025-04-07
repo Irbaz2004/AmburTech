@@ -22,7 +22,7 @@ const TextWrapper = styled.div`
   font-size: 18px;
   font-family: 'Questrial', sans-serif;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 20px;
   color: white;
 
@@ -128,6 +128,11 @@ const Description = styled.div`
   max-width: 100%;
   line-height: 1.2;
 
+  p{
+    margin-top: 10px;
+  text-align:cenyer;
+  }
+ 
   @media (max-width: 768px) {
     max-width: 100%;
   }
@@ -170,7 +175,7 @@ export default function Treatments() {
             </IconWrapper>
             <Description>
               <strong>03 | Tertiary Treatment</strong>
-              <p>Advanced chemical treatment and filtration to remove dissolved contaminants like TDS, nitrogen, and phosphorus.</p>
+              <p>This phase typically involves advanced techniques, such as filtration, chemical treatments, to achieve higher water quality standards and make the effluent suitable for UF and RO.</p>
             </Description>
           </Step>
           <Step>

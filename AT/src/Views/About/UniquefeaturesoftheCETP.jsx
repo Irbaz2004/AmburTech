@@ -201,7 +201,7 @@ export default function UniquefeaturesoftheCETP() {
           <ListItem>  	Installation of ZLD System at a cost of Rs.588 million under the Up-gradation and Installation of Infrastructure for Environmental Protection in the Tanning Industry of the Department of Industrial Policy & Promotion (DIPP), Ministry of Commerce and Industry under the IFLDP scheme.</ListItem>
           </ul>
       </ListContainer>
-      <SubTitle>	The ZLD System of RANITEC CETP consists of the following:</SubTitle>
+      <SubTitle>	The ZLD System of AMBURTEC CETP consists of the following:</SubTitle>
       <SubTitle>1.Primary Treatment </SubTitle>
       <ListContainer>
         <ul>  
@@ -258,7 +258,7 @@ export default function UniquefeaturesoftheCETP() {
     <ListItem1>	Connection of CETP flow meters to the CARE AIR CENTER of Tamilnadu Pollution Control Board (TNPCB) for online monitoring.</ListItem1>
         <ListItem1>	Operation of the plant in the CETP with computerized management system.</ListItem1>
         <ListItem1>	CETP have installed Electromagnetic flow meters in all operating member tanneries and implemented flow based maintenance charges since 2008. This also complies with the Charter for Corporate Responsibility for Environmental Protection (CCREP), 2003</ListItem1>
-      <ListItem1>	Construction of a Secure Land Fill System (SLF) with a capacity of 96,000 ton at a cost of Rs.78.53 million under the ASIDE scheme with the technical assistance from Central Leather Research Institute (CLRI).</ListItem1>
+      <ListItem1>	Construction of a Secure Land Fill System (SLF) with a capacity of 88,000 ton at a cost of Rs.72 million under the ASIDE scheme with the technical assistance from Central Leather Research Institute (CLRI).</ListItem1>
      
     </DiffList>
     </>
